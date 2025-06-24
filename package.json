@@ -1,0 +1,38 @@
+{
+  "name": "filestream-cf",
+  "version": "2.0.0",
+  "description": "A secure file sharing Telegram bot using Cloudflare Workers",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "webpack",
+    "dev": "wrangler dev",
+    "deploy": "wrangler publish",
+    "format": "prettier --write '**/*.{js,json,md}'",
+    "lint": "eslint 'src/**/*.js'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pranaykumar2/filestream-cf.git"
+  },
+  "keywords": [
+    "telegram",
+    "bot",
+    "cloudflare",
+    "workers",
+    "file-sharing"
+  ],
+  "author": "pranaykumar2",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pranaykumar2/filestream-cf/issues"
+  },
+  "homepage": "https://github.com/pranaykumar2/filestream-cf#readme",
+  "devDependencies": {
+    "eslint": "^8.47.0",
+    "prettier": "^3.0.2",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
+    "wrangler": "^3.6.0"
+  }
+}

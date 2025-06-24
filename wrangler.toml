@@ -1,4 +1,22 @@
-name = "streamfile-cf"
-main = "worker.js"
-compatibility_date = "2024-05-29"
+name = "filestream-cf"
+main = "src/index.js"
+compatibility_date = "2023-09-11"
 compatibility_flags = ["nodejs_compat"]
+
+[build]
+command = "npm run build"
+
+[vars]
+# These values will be overridden by environment variables set in the Cloudflare dashboard
+# or via wrangler secrets
+BOT_TOKEN = "6897908160:AAHmD99BeEcmh2tqvwhrw6Evj_H73Hexd_s"
+BOT_WEBHOOK = "/endpoint"
+BOT_SECRET = "86dfcf30805611c02c79aacb3e2c13bccf8150cd"
+BOT_OWNER = "6328655855"
+BOT_CHANNEL = "-1002087613451"
+SIA_SECRET = "DW6FwzlcQpMaUA43j2+hha2pcw4H4ejt5Hl93kLEsag="
+PUBLIC_BOT = "false"
+
+# Example KV namespace binding (uncomment and replace with your own values)
+# [kv_namespaces]
+# FILESTREAM_KV = { binding = "FILESTREAM_KV", id = "your-kv-namespace-id" }

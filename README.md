@@ -1,72 +1,81 @@
-# Streamfile Worker
-File To Link Telegram Bot Using Cloudflare Workers.
+# Filestream-CF
 
-<br>
+A secure file sharing Telegram bot using Cloudflare Workers.
 
-## 🗂 Variables
-```javascript
-const BOT_TOKEN = "BOT_TOKEN"; // Insert your bot token.
-const BOT_WEBHOOK = "/endpoint"; // Let it be as it is.
-const BOT_SECRET = "BOT_SECRET"; // Insert a powerful secret text.
-const BOT_OWNER = 123456789; // Insert your telegram account id.
-const BOT_CHANNEL = -100123456789; // Insert telegram channel id.
-const SIA_SECRET = "SIA_SECRET"; // Insert a powerful secret text.
-const PUBLIC_BOT = false; // Make your bot public.
-```
+![GitHub License](https://img.shields.io/github/license/pranaykumar2/filestream-cf)
+![GitHub Version](https://img.shields.io/badge/version-2.0.0-blue)
 
-### Setup:
-- Get `BOT_TOKEN` from [@botfather](https://t.me/botfather).
-    - Turn on `inline mode` in bot settings.
-    - Disable `inline feedback` for better results.
-- Change `BOT_WEBHOOK` with your preferred webhook.
-- Change `BOT_SECRET` with a powerful secret text (only `[A-Z, a-z, 0-9, _, -]` are allowed).
-- Change `SIA_SECRET` with a powerful secret text using [password-generator](https://1password.com/password-generator).
-- Change `PUBLIC_BOT` to make your bot public (only `[true, false]` are allowed).
-- Get `BOT_OWNER` from [@idbot](https://t.me/username_to_id_bot).
-- Get `BOT_CHANNEL` id by forwarding a message from channel to [@idbot](https://t.me/username_to_id_bot).
-  - Channel **ID** must start with `-100`.
-  - Bot must be **admin** in channel with **edit rights**.
+## Features
 
-<br>
+- **Secure File Sharing**: Share files through Telegram and generate public links
+- **Multiple Access Methods**:
+  - Telegram direct link (up to 4GB)
+  - Inline query (up to 4GB)
+  - Direct download link (up to 20MB)
+  - Streaming link (up to 20MB)
+- **Modern Security**: 
+  - AES-GCM encryption for file hashes
+  - PBKDF2 key derivation with SHA-256
+  - Rate limiting to prevent abuse
+- **Improved Architecture**:
+  - Modular code structure
+  - Better error handling
+  - Enhanced security measures
+- **Modern UI**:
+  - Responsive web interface
+  - Dark/light mode support
+  - Configuration generator
 
-## ⚙️Deploy
-- Create a [Cloudflare](https://www.cloudflare.com/) **account**.
-- Navigate to `Workers & Pages > Create > Create Worker`.
-- Deploy the worker by clicking **Deploy**.
-- Edit the code by clicking **Edit Code**.
-- **Maunally:**
-    - Upload `worker.js` into **Cloudflare**.
-    - Modify the [variables](#-variables).
-- **Dynamic:**
-    - Generate the code using [code generator](https://vauth.github.io/filestream-cf/).
-    - Copy paste the generated code to cloudflare workers.
-- Finally, **Deploy**.
+## Demo
 
-[![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/vauth/filestream-cf)
-### Setup:
-- Once you deployed the bot on Cloudflare.
-- Check `XXX.XXXX.workers.dev/getMe` to verify your bot authorization.
-- Open `XXX.XXXX.workers.dev/registerWebhook` to register your bot webhook.
-- Then you can start using your bot.
+To try out the bot, send a file to: (your bot here)
 
-<br>
+## Quick Start
 
-## 📚 Response
-```python
-Telegram Link: t.me/usernamebot/?start=GRJUYMDDJRFGK
-Inline Link: @usernamebot GRJUYMDDJRFGK
-Download Link: XX.XX.workers.dev/?file=GRJUYMDDJRFGK
-Stream Link: XX.XX.workers.dev/?file=GRJUYMDDJRFGK&mode=inline
-```
+1. Create a new Telegram bot with [@BotFather](https://t.me/botfather)
+2. Enable inline mode for your bot
+3. Create a channel and add your bot as an admin
+4. Visit our [Configuration Generator](https://your-worker-url.workers.dev/) to create your worker code
+5. Deploy the code to Cloudflare Workers
+6. Visit `your-worker-url.workers.dev/registerWebhook` to set up the webhook
+7. Start using your bot by sending it files!
 
-### Limitation:
-- Telegram Link: `<4.00GB`
-- Inline Link: `<4.00GB`
-- Download Link: `<20.00MB`
-- Stream Link: `<20.00MB`
+## Detailed Setup
 
-<br>
+### Requirements
 
-## 📷 Screenshot
+- Telegram Bot Token (from [@BotFather](https://t.me/botfather))
+- Telegram User ID (from [@username_to_id_bot](https://t.me/username_to_id_bot))
+- Telegram Channel ID (must start with `-100`)
+- Cloudflare account
 
-<a href="#Screenshot"><img src="https://github.com/user-attachments/assets/09101285-c68c-44a1-aaa1-e2d5c4c0cf90" width="300px"></a>
+### Bot Configuration
+
+1. Talk to [@BotFather](https://t.me/botfather) and create a new bot with `/newbot`
+2. Enable inline mode with `/setinline`
+3. Optionally disable inline feedback with `/setinlinefeedback`
+
+### Channel Setup
+
+1. Create a new channel (public or private)
+2. Add your bot as an administrator with permissions to post messages
+3. Get the channel ID by forwarding a message from it to [@username_to_id_bot](https://t.me/username_to_id_bot)
+4. Make sure the channel ID starts with `-100`
+
+### Cloudflare Workers Setup
+
+#### Option 1: Using the Web UI
+
+1. Visit the [Configuration Generator](https://your-worker-url.workers.dev/)
+2. Fill in all required fields
+3. Click "Generate Worker Code"
+4. Copy the generated code
+5. Create a new Cloudflare Worker
+6. Paste the code and deploy
+
+#### Option 2: Manual Deployment
+
+1. Clone this repository
+   ```bash
+   git clone https://github.com/pranaykumar2/filestream-cf.git
+   cd filestream-cf
