@@ -1,0 +1,194 @@
+\documentclass[a4paper,20pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.530in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.45in}
+\addtolength{\textheight}{1in}
+
+\urlstyle{rm}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-10pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeItemWithoutTitle}[1]{
+  \item\small{
+    {\vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{#3} & \textit{#4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-3pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-----------------------------
+%%%%%%  CV STARTS HERE  %%%%%%
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{@{}l@{\extracolsep{\fill}}r@{}}
+  \begin{minipage}[c]{0.6\textwidth}
+    \textbf{{\LARGE Mayookh Bethi}} \\
+    \href{https://www.linkedin.com/in/mayookh-bethi/}{LinkedIn: Mayookh Bethi} \\
+    \href{https://github.com/Mayooookh}{GitHub: github.com/Mayooookh} \\
+    Mobile: +91-6304171730 \\
+    Email: \href{mailto:mayookhbethi@gmail.com}{mayookhbethi@gmail.com}
+  \end{minipage} &
+  \begin{minipage}[c]{0.3\textwidth}
+    \raisebox{-0.5cm}{
+    \hspace{66pt}
+    \includegraphics[width=3cm, height=3cm]{my_pic.png}
+  }
+  \end{minipage}
+\end{tabular*}
+
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+    {Bachelor of Technology - CSE - AIML;  GPA: 8.57}{September 2021 - May 2025 (Expected)}
+      {Vignan's Foundation for Science, Technology, \& Research}{Andhra Pradesh, India}  
+      %{\scriptsize \textit{ \footnotesize{\newline{}\textbf{Relevant Courses:} Operating Systems, Data Structures, Analysis Of Algorithms, Blockchain, Cryptography and Network Security, Cybersecurity, Computer Networks, Digital Forensics, Cloud Computing}}}
+  \resumeSubHeadingListEnd
+  
+\vspace{-2pt}
+
+\section{Technical Skills}
+	\resumeSubHeadingListStart
+	\resumeSubItem{Programming Languages}{Python, JAVA}
+        \vspace{2pt}
+        \resumeSubItem{Database Skills}{RDBMS, MYSQL}
+ \vspace{2pt}
+	\resumeSubItem{Tools \& Technologies}{Machine Learning, Deep Learning, Reinforcement Learning, Computer Vision, Natural Language Processing, Hadoop, Matplotlib, Pytorch}\vspace{2pt}
+	\resumeSubItem{Knowledgeable}{Data Preprocessing, Data Engineering, Data Modeling, Statistical Analysis}\vspace{2pt}
+
+
+%\resumeSubItem{Soft Skills}
+	%{Time Management, Communication, Collaborative, Project Management}
+
+	\resumeSubHeadingListEnd
+\vspace{-2pt}
+
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+        {Artificial Intelligence and Machine Learning Intern }{July 2024 - October 2024}
+        {Innovate Intern}{Virtual}
+		
+		\resumeItemListStart
+                \resumeItem{Collaboration}
+                {Collaborated on AI and ML projects and gained hands-on experience in developing and deploying modern
+applications.}
+                  \begin{itemize}
+                    \item Collaborated with the development team to design reliable technological solutions.
+                  \end{itemize}
+                \resumeItem{Model Development}{Developed a modern application of Real-time Object Detection using Single Shot Multibox Detector (SSD).}
+		\resumeItemListEnd
+
+    
+
+%-----------PROJECTS-----------------
+\section{Projects}
+\resumeSubHeadingListStart
+
+\resumeSubItem{Detection of Vehicles in Low Light Conditions} \hfill {January 2024 - May 2024} {
+  \begin{itemize}
+    \item Collaborated with a team of three to develop a vehicle detection system using YOLOv8 for low-light environments,
+using a detailed collected dataset enhanced with RoboFlow annotations.
+    \item Trained the YOLOv8 model with advanced data augmentation, achieving a mAP50 of 0.8 and a mAP50-95 of 0.4,
+with a precision of 1.00 at 0.898 and a recall of 0.859.
+    \item Applied Python with libraries like OpenCV and Ultralytics for data handling and model training; meticulously
+documented performance improvements and visualized metrics, to evaluate accuracy under low-light conditions
+such as night, fog, and rain.
+  \end{itemize}
+\vspace{2pt}
+\resumeSubItem{Targeted Human Tracking Using YOLO} \hfill {February 2024 - June 2024} {
+  \begin{itemize}
+    \item The model detects and tracks a specific person in a video after identifying all detected humans in the first frame based on user-selected ID.
+    \item Incorporates precision (~90\%), recall (~85\%), and accuracy (~88\%) evaluations for object detection and tracking to ensure robust identification and continuity, even in dynamic scenes.
+  \end{itemize}
+}
+\vspace{2pt}
+
+
+\vspace{-5pt}
+
+\section*{Certifications and Awards}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}l r}
+\vspace{4pt}
+\textbf{Azure Fundamentals AZ-900 - Microsoft} & September, 2024 \\
+ \vspace{4pt}
+ \textbf{Oracle Certified Founding Associate - Oracle} & August, 2024 \\
+ \vspace{4pt}
+ \textbf{Leadership and Team Eﬀectiveness - NPTEL} & April, 2024 \\
+ \vspace{4pt}
+ \textbf{4th Place: Java Fullstack Development Hackathon} & January, 2024 \\
+\vspace{4pt}
+\textbf{Computer Vision - NPTEL} & October, 2023 \\
+\vspace{4pt}
+ \textbf{Applied Accelerated Artificial Intelligence - NPTEL} & October, 2023 \\
+\vspace{4pt}
+ \textbf{Business English Certificate Vantage  - Cambridge University} & May, 2023 \\
+\vspace{4pt}
+ \textbf{Principles of Management - NPTEL} & April, 2023 \\
+ \vspace{4pt}
+ \textbf{Participation in Srujanankura hackathon} & March, 2023 \\
+ \vspace{4pt}
+\end{tabular*}
+\section*{Participation / Extracurricular Activities}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}l r}
+\vspace{4pt}
+\textbf{Participated in Badminton Tournament - VFSTR Competitions} & May, 2024 \\
+\vspace{4pt}
+\textbf{Food Coordinator - VISIT-2K23 Department Fest} & April, 2023 \\
+\end{tabular*}
+
+\end{document}   
